@@ -20,7 +20,7 @@ void f_queue(stack_t **head, unsigned int counter)
 */
 void addqueue(stack_t **head, int n)
 {
-	stack_t *new_node, *aux;
+	stack_t *new_nod, *auxs;
 
 	auxs = *head;
 	new_nod = malloc(sizeof(stack_t));
