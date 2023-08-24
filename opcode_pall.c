@@ -1,25 +1,21 @@
 #include "monty.h"
-
 /**
- * pall - Prints all the values on the stack,
- * starting from the top of the stack.
- * @stack: The head of the stack
- * @line_number: Line number of the command in the bytecode filetecode file
- *
- * Return: Nothing
- */
-void pall(stack_t **stack, unsigned int line_number)
+ * f_pall - prints the stack
+ * @head: stack head
+ * @counter: no used
+ * Return: no return
+*/
+void f_pall(stack_t **head, unsigned int counter)
 {
-	stack_t *curr = NULL;
-	(void) line_number;
+	stack_t *h;
+	(void)counter;
 
-	if (*stack)
+	h = *head;
+	if (h == NULL)
+		return;
+	while (h)
 	{
-		curr = *stack;
-		while (curr)
-		{
-			printf("%d\n", curr->n);
-			curr = curr->next;
-		}
+		printf("%d\n", h->n);
+		h = h->next;
 	}
 }
